@@ -70,9 +70,11 @@ function App() {
 
     setLoading(true);
 
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/profile", formData);
+      const res = await axios.post(`${API_BASE_URL}/profile`, formData);
       setData(res.data);
       setSelectedColumn(res.data.columns?.[0] ?? null);
     } catch (err) {
