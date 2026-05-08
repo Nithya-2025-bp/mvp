@@ -1,3 +1,55 @@
+/* Premium font stack - Geist (Vercel's font) or Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap');
+
+* {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Increase font-weight boldness globally */
+h1, h2, h3, .font-black {
+  letter-spacing: -0.02em; /* Tighter tracking for headings */
+}
+
+/* More dramatic number display */
+.stat-number {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.input {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  background: white;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #334155;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.chart-filter-btn {
+  border-radius: 0.75rem;
+  background: #f1f5f9;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #475569;
+  transition: all 0.15s ease;
+}
+
+.chart-filter-btn:hover {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
