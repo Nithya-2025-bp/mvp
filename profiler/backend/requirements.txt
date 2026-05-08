@@ -5,3 +5,4 @@ polars
 fastexcel
 pyarrow
 pandas
+openpyxl
